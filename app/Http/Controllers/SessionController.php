@@ -15,6 +15,8 @@ class SessionController extends Controller
         $session->set('name', $request->name);
         $session->set('guid', $request->guid);
         $session->set('phone_number', $request->phone_number);
+        $session->set('role', $request->role);
+        $session->set('point', $request->point);
 
         return $request->name;
     }

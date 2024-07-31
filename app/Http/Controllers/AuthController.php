@@ -37,7 +37,7 @@ class AuthController extends Controller
     }
     public function register()
     {
-        return view('auth.register');
+        return view('content.authentications.auth-register-basic');
     }
     // content.authentications.auth-register-basic
     public function verifyEmail()
@@ -70,7 +70,7 @@ class AuthController extends Controller
             'otp' => $otp
         ]);
         if ($response->successful()) {
-            return view('auth.login');
+            return view('content.authentications.auth-login-basic');
         }
     }
 }

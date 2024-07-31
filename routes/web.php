@@ -14,6 +14,7 @@ use App\Http\Controllers\dashboard\About;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\dashboard\CarbonCalculator;
+use App\Http\Controllers\dashboard\Coupons;
 use App\Http\Controllers\dashboard\Offer;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
@@ -82,6 +83,11 @@ Route::group([
     Route::get('/offer/edit/{guid}', [Offer::class, 'offerEdit'])->name('offer');
     Route::get('/offer/add', [Offer::class, 'offerAdd'])->name('offer');
     Route::get('/offer/delete/{guid}', [Offer::class, 'offerDelete'])->name('offer');
+
+    Route::get('/coupons', [Coupons::class, 'coupons'])->name('coupons');
+    Route::get('/coupons/edit/{guid}', [Coupons::class, 'couponsEdit'])->name('coupons');
+    Route::get('/coupons/add', [Coupons::class, 'couponsAdd'])->name('coupons');
+    Route::get('/coupons/delete/{guid}', [Coupons::class, 'couponsDelete'])->name('coupons');
     
     Route::get('/users', [Merchants::class, 'users'])->name('users');
     Route::get('/users/edit/{guid}', [Merchants::class, 'usersEdit'])->name('usersE');

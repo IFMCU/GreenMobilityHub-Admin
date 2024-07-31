@@ -33,26 +33,34 @@
         <h5 class="mb-0">Basic Layout</h5> <small class="text-muted float-end">Default label</small>
       </div> -->
       <div class="card-body">
-        <form>
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="basic-default-name">Mileage</label>
-            <div class="col-sm-10">
-              <input type="number" class="form-control" id="basic-default-name" />
+        <form id="form">
+          <div class="row">
+            <div class="col-md-12">
+              <label for="type" class="form-label">Tipe Kendaraan</label>
+              <select class="form-select" aria-label="Default select example" id="type">
+                <option selected>Open this select menu</option>
+                <option value="mobil">Mobil</option>
+                <option value="motor">Motor</option>
+                <option value="bus">Bus</option>
+              </select>            
             </div>
-          </div>
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="basic-default-company">Vehicle</label>
-            <div class="col-sm-10">
-              <select id="multicol-vehicle" class="select2 form-select select2-hidden-accessible" data-allow-clear="true" data-select2-id="multicol-vehicle" tabindex="-1" aria-hidden="true">
-                <option value="" data-select2-id="2">Select</option>
-                <option value="car" data-select2-id="76">Car</option>
-                <option value="motorcycle" data-select2-id="77">Motorcycle</option>
-              </select>
+            <div class="col-md-12">
+
             </div>
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">Count</button>
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12">
+
             </div>
           </div>
         </form>

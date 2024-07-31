@@ -54,6 +54,7 @@ class GoogleController extends Controller
                     $session->set('access_token', $response['data']['access_token']);
                     $session->set('name', $data['data']['name']);
                     $session->set('guid', $data['data']['guid']);
+                    $session->set('role', $data['data']['role']);
 
                     return redirect('dashboard');
                 } else {

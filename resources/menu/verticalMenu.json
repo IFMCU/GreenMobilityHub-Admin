@@ -4,70 +4,83 @@
       "url": "/dashboard",
       "icon": "menu-icon tf-icons mdi mdi-home-outline",
       "name": "Dashboards",
-      "slug": "dashboard-analytics"
+      "slug": "dashboard-analytics",
+      "role":"user"
     },
     {
       "url": "/maps",
       "icon": "menu-icon tf-icons mdi mdi-map-outline",
       "name": "Maps",
-      "slug": "dashboard-maps"
-    },
-    {
-      "url": "/carbon-calculator",
-      "icon": "menu-icon tf-icons mdi mdi-calculator-variant",
-      "name": "Carbon Calculator",
-      "slug": "dashboard-carbon-calculator"
+      "slug": "dashboard-maps",
+      "role":"user"
     },
     {
       "url": "/offer",
       "icon": "menu-icon tf-icons mdi mdi-tag",
       "name": "Offer",
-      "slug": "dashboard-offer"
+      "slug": "dashboard-offer",
+      "role":"user"
     },
     {
-      "menuHeader": "Admin"
+      "url": "/coupons",
+      "icon": "menu-icon tf-icons mdi mdi-tag",
+      "name": "Coupons",
+      "slug": "dashboard-coupons",
+      "role":"user"
+    },
+    {
+      "menuHeader": "Admin",
+      "roleHeader":"admin"
     },
     {
       "url": "merchants",
       "icon": "menu-icon tf-icons mdi mdi-database-outline",
       "name": "Merchants",
-      "slug": "merchants"
+      "slug": "merchants",
+      "role":"admin"
     },
     {
       "url": "merchants_locations",
       "icon": "menu-icon tf-icons mdi mdi-database-outline",
       "name": "Merchants Locations",
-      "slug": "merchants_locations"
+      "slug": "merchants_locations",
+      "role":"admin"
     },
     {
       "url": "parking_lots",
       "icon": "menu-icon tf-icons mdi mdi-database-outline",
       "name": "Parking Lots",
-      "slug": "parking_lots"
+      "slug": "parking_lots",
+      "role":"admin"
     },
     {
       "url": "users",
       "icon": "menu-icon tf-icons mdi mdi-database-outline",
       "name": "Users",
-      "slug": "users"
+      "slug": "users",
+      "role":"admin"
     },
     {
-      "menuHeader": "Account"
+      "menuHeader": "Account",
+      "roleHeader":"user"
     },
     {
       "url": "pages/account-settings-account",
       "icon": "menu-icon tf-icons mdi mdi-account-outline",
       "name": "Account",
-      "slug": "pages-account-settings-account"
+      "slug": "pages-account-settings-account",
+      "role":"user"
     },
     {
-      "menuHeader": "About"
+      "menuHeader": "About",
+      "roleHeader":"user"
     },
     {
       "url": "/about-us",
       "icon": "menu-icon tf-icons mdi mdi-us-outline",
       "name": "About Us",
-      "slug": "about-us"
+      "slug": "about-us",
+      "role": "user"
     }
   ]
 }

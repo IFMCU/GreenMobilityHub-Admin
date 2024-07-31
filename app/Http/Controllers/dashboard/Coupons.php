@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Illuminate\Support\Facades\Http;
 
-class Offer extends Controller
+class Coupons extends Controller
 {
    
-    public function offer()
+    public function coupons()
     {
         $session = new Session();
         $token = $session->get('access_token');
@@ -20,8 +20,10 @@ class Offer extends Controller
     
         $resultAPI = Http::withHeaders([
           'Authorization' => "Bearer " . $token
-        ])->get(env("URL_API", "http://example.com") . '/api/v1/offer');
+        ])->get(env("URL_API", "http://example.com") . '/api/v1/coupon');
         $dataResults = $resultAPI->json();
-        return view('content.dashboard.offer', compact('token', 'guid', 'name','point','dataResults', 'session'));
+
+        // dd($dataResults);
+        return view('content.dashboard.coupons', compact('token', 'guid', 'name','point','dataResults', 'session'));
     }
 }

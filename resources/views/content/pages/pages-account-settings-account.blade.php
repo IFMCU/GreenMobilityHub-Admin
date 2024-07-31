@@ -1,9 +1,27 @@
 @extends('layouts/contentNavbarLayout')
 
-@section('title', 'Account settings - Account')
+@section('title', 'Dashboard - Analytics')
 
-@section('page-script')
-<script src="{{asset('assets/js/pages-account-settings-account.js')}}"></script>
+@section('vendor-style')
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/apex-charts/apex-charts.css')}}">
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+@endsection
+
+@section('vendor-script')
+<script src="{{asset('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 @endsection
 
 @section('content')
@@ -45,7 +63,7 @@
           <div class="row mt-2 gy-4">
             <div class="col-md-6">
               <div class="form-floating form-floating-outline">
-                <input class="form-control" type="text" id="firstName" name="firstName" placeholder="John Doe" autofocus />
+                <input class="form-control" type="text" id="firstName" name="firstName" placeholder="John Doe" value="{{ $name }}" autofocus />
                 <label for="firstName">Name</label>
               </div>
             </div>
@@ -180,7 +198,7 @@
       </div>
       <!-- /Account -->
     </div>
-    <div class="card">
+    <!-- <div class="card">
       <h5 class="card-header fw-normal">Delete Account</h5>
       <div class="card-body">
         <div class="mb-3 col-12">
@@ -197,7 +215,7 @@
           <button type="submit" class="btn btn-danger">Deactivate Account</button>
         </form>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 @endsection

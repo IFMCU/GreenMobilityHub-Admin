@@ -17,6 +17,8 @@
   <div class="menu-inner-shadow"></div>
 
   <ul class="menu-inner py-1">
+
+  
     @foreach ($menuData[0]->menu as $menu)
 
     {{-- adding active and open class if child is active --}}
@@ -26,7 +28,6 @@
     <li class="menu-header fw-medium mt-4">
       <span class="menu-header-text">{{ __($menu->menuHeader) }}</span>
     </li>
-
     @else
 
     {{-- active menu method --}}
@@ -74,6 +75,6 @@
     </li>
     @endif
     @endforeach
-  </ul>
 
+  </ul>
 </aside>

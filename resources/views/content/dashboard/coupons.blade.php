@@ -106,12 +106,11 @@
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h3 class="card-title">{{ $dataResult['name'] }}</h3>
-                        <h5 class="card-text" >{{ $dataResult['merchant_masters']['name'] }}</h5>
-                        <p class="card-text">{{ $dataResult['stock'] }} stocks <br>{{ $dataResult['point'] }} points</p>
-                        <p class="card-text">{{ $dataResult['description'] }}</p>
-                        
-                        <a class="btn btn-primary w-100" data-guid="{{ $dataResult['guid'] }}" data-point="{{ $dataResult['point'] }}" onclick="reedem(this)">Tukar Point</a>
+                        @if($dataResult['user_guid'] === $guid)
+                          <h3 class="card-title">{{ $dataResult['offer']['name'] }}</h3>
+                          <h5 class="card-text" >{{ $dataResult['offer']['merchant_masters']['name'] }}</h5>
+                          <h5 class="card-text" >{{ $dataResult['code'] }}</h5>
+                        @endif
                       </div>
                     </div>
                   </div>

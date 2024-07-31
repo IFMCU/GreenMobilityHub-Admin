@@ -116,6 +116,7 @@
                 "Bearer " + resultLogin.data.access_token);
             },
             success: function(result) {
+              // console.log(result)
               $.ajax({
                 type: "POST",
                 url: "{{ route('session.login') }}",
@@ -125,10 +126,11 @@
                     .access_token,
                   name: result.data.name,
                   guid: result.data.guid,
-                  country: result.data.country
+                  point: result.data.point,
+                  
                 },
                 success: function() {
-                  window.location = "/dashboard";
+                   window.location = "/dashboard";
                 }
               });
             },
